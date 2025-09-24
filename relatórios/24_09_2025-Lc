@@ -43,9 +43,4 @@ Samples a token from the logits using temperature scaling.
         temperature (float, optional): O valor da temperatura para sampling (normalemnte 1.0)"temperatura se caracteriza como a aleatoriedade das previsões de texto aomentado criativade mas também possibilitando incoerências"
     Retorna
       List[List[int]]: A lista dos tokens gerados para cada sequêcia.
-
-
-
-
-WORK IN PROGRESS!
     
