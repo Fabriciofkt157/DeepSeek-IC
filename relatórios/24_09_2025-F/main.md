@@ -55,5 +55,5 @@ Possiveis soluções: há algumas versões menores do DeepSeek, além das oficia
 
 
 ## Download e execução local: Podemos usar um script simples em Python:
-Acesse o arquivo em DownloadDeepSeek.py(https://github.com/Fabriciofkt157/DeepSeek-IC/blob/main/relat%C3%B3rios/24_09_2025-F/downloadDeepSeek.py)
+Acesse o arquivo em DownloadDeepSeek.py: https://github.com/Fabriciofkt157/DeepSeek-IC/blob/main/relat%C3%B3rios/24_09_2025-F/downloadDeepSeek.py
 
