@@ -1,0 +1,51 @@
+RELATÓRIO PESQUISA DEEPSEEK LUCAS POMPERMAYER
+
+MATERIAIS:
+Deepseek-R1
+Deepseek-V3
+
+DEEPSEEK-R1{
+Foram aplicados métodos de treinamento reforçados (RL) sem usar um modelo de "Supervised Fine Tuning (STF)"
+modelo normalmente usado para formação de grandes modelos de linguagem. Essa aproximação não foi explorada
+para fins de possibilitar o uso do modelo Chain-of-Thought(CoT). O modelo "CoT" demonstrou grandes capacidades na resoluãode problemas
+sendo marcado com inovação na área da pesquisa especialmente no âmbito open soruce.
+  A implementeção de dois estágios de Reinforcement Learning, permitiu a diminuição dos modelos,
+viabilizado e facilitando pesquisas na àrea.
+}
+
+DEEPSEEK-V3{
+
+def sample(logits, temperature: float = 1.0):
+
+Samples a token from the logits using temperature scaling.
+
+    Args:
+        logits (torch.Tensor): The logits tensor for token predictions.
+        temperature (float, optional): Temperature for scaling logits. Defaults to 1.0.
+
+    Returns:
+        torch.Tensor: The sampled token.
+    
+    logits = logits / max(temperature, 1e-5)
+    probs = torch.softmax(logits, dim=-1)
+    return probs.div_(torch.empty_like(probs).exponential_(1)).argmax(dim=-1)
+
+
+
+
+
+    Gera novos tokens utilizando o prompt dado usando o modelo especificado.
+    Args:
+        model (Transformer): O modelo usado para geração dos tokens.
+        prompt_tokens (List[List[int]]): A lista das listas que contém os novos tokens a serem gerados.
+        max_new_tokens (int): O número máximo de tokens que serão gerados.
+        eos_id (int): O endereço do token do fim da sequência.
+        temperature (float, optional): O valor da temperatura para sampling (normalemnte 1.0)"temperatura se caracteriza como a aleatoriedade das previsões de texto aomentado criativade mas também possibilitando incoerências"
+    Retorna
+      List[List[int]]: A lista dos tokens gerados para cada sequêcia.
+
+
+
+
+WORK IN PROGRESS!
+    
