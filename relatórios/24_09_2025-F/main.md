@@ -51,7 +51,7 @@ Com DeepSeek LLM 7B (4-bit):
 - Tempo para responder 20 palavras (≈26 tokens): 10-20 segundos de espera → Impraticável
 
   
-Possiveis soluções: há algumas versões menores do DeepSeek, além das oficiais. A mais simples delas é a com 1.3B de parâmetros "deepseek-ai/deepseek-llm-1.3b", com tamanho aproximado de 2.5GB. Note que é possível quantizar esse modelo para 4 bits, isso resulta em 700MB e 10-15 tokens/s no Pi (provavelmente 8-15 tokens/segundo), assim temos um tempo de resposta de 2-3 segundos. 
+Possiveis soluções: há algumas versões menores do DeepSeek, além das oficiais. A mais simples delas é a com 1.3B de parâmetros DeepSeek-R1-Distill-Qwen-1.5B, com tamanho aproximado de 2.5GB. Note que é possível quantizar esse modelo para 4 bits, isso resulta em 700MB e 10-15 tokens/s no Pi (provavelmente 8-15 tokens/segundo), assim temos um tempo de resposta de 2-3 segundos. 
 
 
 ## Download e execução local: Podemos usar um script simples em Python:
