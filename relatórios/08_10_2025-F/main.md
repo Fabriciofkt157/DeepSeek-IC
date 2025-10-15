@@ -22,6 +22,6 @@ Este é o caminho se formos utilizar a IA especializada em uma tarefa ou domíni
 - Plataformas: Hugging Face é o principal hub para isso. Ele oferece modelos, datasets e ferramentas (como a biblioteca transformers) para facilitar o fine-tuning.
 
 ## Alternativa 3: Treinar um Modelo "Pequeno" do Zero (Pode ser muito dificil e levar muito tempo devido aos recursos do laboratório)
-Como: Definimos nossa própria arquitetura (ou usamos uma padrão), coletamos e preparamos nosso dataset e usamos frameworks como PyTorch ou TensorFlow para treinar a rede neural do início ao fim.
-Vantagens: Controle total. O modelo é perfeitamente adaptado aos seus dados.
-Desafios: Requer uma quantidade significativa de dados e poder computacional (GPUs/TPUs).
+- Como: Definimos nossa própria arquitetura (ou usamos uma padrão), coletamos e preparamos nosso dataset e usamos frameworks como PyTorch ou TensorFlow para treinar a rede neural do início ao fim.
+- Vantagens: Controle total. O modelo é perfeitamente adaptado aos seus dados.
+- Desafios: Requer uma quantidade significativa de dados e poder computacional (GPUs/TPUs).
