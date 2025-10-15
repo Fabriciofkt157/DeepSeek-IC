@@ -17,9 +17,11 @@ A comunicação funcionará em uma rede local (Wi-Fi, cabeada, etc), sem precisa
 
 ## Alternativa 2: Fazer Fine-Tuning de um Modelo Open Source
 Este é o caminho se formos utilizar a IA especializada em uma tarefa ou domínio muito específico.
+- Como: Pegamos um modelo de base pré-treinado e de código aberto (como o próprio DeepSeek ou os da família Llama, Mistral ou Gemma do Google) e continua o treinamento dele com nosso próprio conjunto de dados. Por exemplo, "ensinamos" a ele quem ele é e as perguntas mais comuns. Como não precisamos de uma resposta extremamente precisa (seria o ideal, mas custa processamento), podemos usar mecanismos como a Quantização para aumentar o desempenho do modelo.
+- Vantagens: Alta especialização, mais controle sobre o comportamento do modelo e potencial para custos de inferência mais baixos.
+- Plataformas: Hugging Face é o principal hub para isso. Ele oferece modelos, datasets e ferramentas (como a biblioteca transformers) para facilitar o fine-tuning.
 
-- Como: Pegamos um modelo de base pré-treinado e de código aberto (como o próprio DeepSeek ou os da família Llama, Mistral ou Gemma do Google) e continua o treinamento dele com nosso próprio conjunto de dados. Por exemplo, "ensinamos" a ele quem ele é e as perguntas mais comuns. Como não precisamos de uma resposta extremamente precisa (seria o ideal, mas custa processamento), podemos usar mecanismos como 
-
-Vantagens: Alta especialização, mais controle sobre o comportamento do modelo e potencial para custos de inferência mais baixos (se você hospedar o modelo).
-
-Plataformas: Hugging Face é o principal hub para isso. Ele oferece modelos, datasets e ferramentas (como a biblioteca transformers) para facilitar o fine-tuning.
+## Alternativa 3: Treinar um Modelo "Pequeno" do Zero (Pode ser muito dificil e levar muito tempo devido aos recursos do laboratório)
+Como: Definimos nossa própria arquitetura (ou usamos uma padrão), coletamos e preparamos nosso dataset e usamos frameworks como PyTorch ou TensorFlow para treinar a rede neural do início ao fim.
+Vantagens: Controle total. O modelo é perfeitamente adaptado aos seus dados.
+Desafios: Requer uma quantidade significativa de dados e poder computacional (GPUs/TPUs).
