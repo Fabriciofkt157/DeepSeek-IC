@@ -5,4 +5,4 @@ Sendo elas as mais diretas, suas implementações são simples necessitando apen
 Implementaçao da API gratuita do Google GTTS
 [Código comentado](
 Modelo-1-online-googleTTS.py)
-#WIP
+# WIP
