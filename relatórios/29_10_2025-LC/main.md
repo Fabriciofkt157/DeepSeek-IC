@@ -19,7 +19,7 @@ Implementação do *Piper* uma engine de text-to-speech local
 - Local
 - Altamente customizável: voz, velocidade da fala, qualidade do audio, etc...
 - Implementação simples
-- Alta compatibilidade visto que foi projeto inicialmente para o *Raspberry pi*
+- Alta compatibilidade visto que foi projetado inicialmente para o *Raspberry pi*
 ### Desvantagens 
 - Talvez seja levemente mais pesado impossibilitando a implementação de alguma alternativa de LLM
 - Talvez Necessitar otimizações
