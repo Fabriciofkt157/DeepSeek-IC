@@ -7,43 +7,45 @@ from datetime import datetime
 from codecarbon import EmissionsTracker
 from huggingface_hub import login
 
-# ==========================================
-# 1. CONFIGURAÇÃO E AUTENTICAÇÃO
-# ==========================================
+
+# COLOQUE SEU TOKEN DENTRO DAS ASPAS ABAIXO:
+SEU_TOKEN_HF = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
+
 
 def autenticar_huggingface():
-    """
-    Verifica se há token salvo ou solicita ao usuário.
-    Necessário apenas se o backend for baixar modelos restritos (Llama 3 original, etc).
-    Para DeepSeek via Ollama, isso é opcional, mas atende ao seu requisito.
-    """
     print("\n--- Autenticação Hugging Face ---")
-    print("Se você já estiver logado no sistema, isso será ignorado.")
-    # Tenta logar de forma não interativa se tiver token no env, senão pede.
+    
+    # 1. Tenta usar o token fixo no código
+    if SEU_TOKEN_HF and SEU_TOKEN_HF.strip() != "" and "hf_" in SEU_TOKEN_HF:
+        try:
+            print("Tentando autenticar com o token inserido no código...")
+            login(token=SEU_TOKEN_HF)
+            print(">> Autenticação realizada com SUCESSO via token fixo!")
+            return # Sai da função, tudo certo
+        except Exception as e:
+            print(f"[ERRO] O token no código é inválido: {e}")
+            print("Alternando para inserção manual...")
+
     try:
-        # Verifica se o usuário quer logar agora
-        token = os.getenv("HF_TOKEN")
-        if not token:
-            print("Insira seu token HF (Write) abaixo para autenticar (ou Enter para pular):")
-            token_input = getpass.getpass("Token HF: ")
+        # Verifica variáveis de ambiente
+        token_env = os.getenv("HF_TOKEN")
+        if token_env:
+            print("Usando token das variáveis de ambiente...")
+            login(token=token_env)
+        else:
+            # Pede ao usuário
+            print("Nenhum token fixo encontrado.")
+            token_input = getpass.getpass("Insira seu token HF (Write) manualmente: ")
             if token_input.strip():
                 login(token=token_input)
-                print("Autenticação realizada com sucesso!")
+                print(">> Autenticação manual realizada com SUCESSO!")
             else:
-                print("Pulando autenticação (modelos públicos funcionarão normal).")
-        else:
-            login(token=token)
+                print(">> Continuando sem autenticação (apenas modelos públicos).")
     except Exception as e:
-        print(f"Erro na autenticação (não crítico para modelos locais): {e}")
+        print(f"Erro na autenticação: {e}")
 
-# ==========================================
-# 2. LISTA DE MODELOS (DEEPSEEK & VARIADOS)
-# ==========================================
-
-# NOTA: Estes modelos devem estar disponíveis no repositório do Ollama.
-# O script tentará fazer o 'pull' se não existirem, mas isso consome banda.
 MODELOS_ALVO = [
-    # --- DeepSeek R1 (Distill Versions) ---
+    
     "deepseek-r1:1.5b",         # Qwen Distill (Leve)
     "deepseek-r1:7b",           # Llama Distill (Padrão)
     "deepseek-r1:8b",           # Llama Distill (Intermediário)
@@ -53,9 +55,7 @@ MODELOS_ALVO = [
     # --- DeepSeek V3/Coder (Base) ---
     "deepseek-coder:6.7b",
     
-    # --- Variações de Quantização (Exemplos explícitos) ---
-    # Para usar quantizações específicas no Ollama, você usa tags.
-    # Certifique-se de ter baixado essas tags específicas.
+    
     "deepseek-r1:7b-q8_0",      # Alta precisão (8-bit)
     "deepseek-r1:7b-q4_K_M",    # Balanceado (4-bit)
     "deepseek-r1:7b-fp16",      # Precisão total (16-bit - PESADO)
@@ -69,10 +69,6 @@ MODELOS_ALVO = [
 PROMPT_USER = "como é ser você?"
 MAX_TOKENS = 5000
 OUTPUT_DIR = "relatorios_benchmark"
-
-# ==========================================
-# 3. FUNÇÕES DE MONITORAMENTO
-# ==========================================
 
 def obter_ram_sistema_gb():
     """Retorna o uso total de RAM do sistema em GB."""
@@ -91,12 +87,9 @@ def salvar_relatorio(dados, filepath):
         f.write(f"{dados['resposta']}\n")
         f.write(f"\n{'='*60}\n\n")
 
-# ==========================================
-# 4. LOOP PRINCIPAL
-# ==========================================
 
 def main():
-    # 1. Autenticação (Requisito do usuário)
+
     autenticar_huggingface()
 
     if not os.path.exists(OUTPUT_DIR):
