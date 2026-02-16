@@ -9,7 +9,7 @@ from huggingface_hub import login
 
 
 # COLOQUE SEU TOKEN DENTRO DAS ASPAS ABAIXO:
-SEU_TOKEN_HF = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
+SEU_TOKEN_HF = "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" 
 
 
 def autenticar_huggingface():
