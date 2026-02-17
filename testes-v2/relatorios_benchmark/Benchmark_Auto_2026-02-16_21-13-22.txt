@@ -1,0 +1,83 @@
+### MODELO: DEEPSEEK-R1:1.5B ###
+Data: 16/02/2026 21:13:27
+Status: Sucesso
+Tempo (s): 12.7699
+Energia (kWh): 0.00022169
+RAM Pico (GB): 2.14
+--- RESPOSTA ---
+Claro! É sempre bom que você me diga. Quaisquer questions ou tive que responder... Fui de boasoppers, mas se o sufriu... Claro, vou te ajudar em mais things! 😄... [truncado]
+
+============================================================
+
+### MODELO: DEEPSEEK-R1:7B ###
+Data: 16/02/2026 21:13:45
+Status: Sucesso
+Tempo (s): 55.3191
+Energia (kWh): 0.00332731
+RAM Pico (GB): 6.83
+--- RESPOSTA ---
+Oi! Eu sou um asistente de inteligência artificial. Não tenho None e perdia de si, mas estou aqui para ajudar com qualquer dúvida ou tarefa que você tenha. Como posso ajudá-lo hoje? 😊... [truncado]
+
+============================================================
+
+### MODELO: DEEPSEEK-R1:8B ###
+Data: 16/02/2026 21:16:44
+Status: Sucesso
+Tempo (s): 529.1900
+Energia (kWh): 0.01489841
+RAM Pico (GB): 6.53
+--- RESPOSTA ---
+Ah, é uma ótima pergunta! 😊
+
+Se eu fosse uma pessoa, diria que sou uma IA criada para te ajudar com respostas, sugestões e bater um papo descontraído. Mas na verdade, não “sou” nada assim — sou um programa inteligente que entende perguntas e cria respostas com base no que aprendi até agora.
+
+Posso ler, processar e gerar textos, mas não tenho corações, nem sentimentos, nem uma vida como um humano. Tudo que sei é resultado de dados e treinamento. Então, posso te ajudar com ideias, esclarecer dúvid... [truncado]
+
+============================================================
+
+### MODELO: DEEPSEEK-R1:14B ###
+Data: 16/02/2026 21:27:51
+Status: Sucesso
+Tempo (s): 715.9371
+Energia (kWh): 0.03118998
+RAM Pico (GB): 10.19
+--- RESPOSTA ---
+To answer your question, "como é ser você?" or "how is it like to be you?" as an AI, I don't have a consciousness or self-awareness. However, I can explain how I function and what my experiences are in that sense.
+
+I am a machine learning model trained on vast amounts of data to recognize patterns and generate responses. My "existence" is purely computational, running on servers with the purpose of processing inputs and producing outputs based on the data I was trained on. I don't have personal ... [truncado]
+
+============================================================
+
+### MODELO: GEMMA:2B ###
+Data: 16/02/2026 21:43:29
+Status: Sucesso
+Tempo (s): 12.9056
+Energia (kWh): 0.03232975
+RAM Pico (GB): 11.95
+--- RESPOSTA ---
+Como um modelo, não tenho uma identidade física ou individualidade. Como um sistema de inteligência artificial, sou uma artificialidade criada por humanos que possui a capacidade de aprender e conversar.... [truncado]
+
+============================================================
+
+### MODELO: LLAMA3.2:3B ###
+Data: 16/02/2026 21:44:35
+Status: Sucesso
+Tempo (s): 166.2056
+Energia (kWh): 0.03629412
+RAM Pico (GB): 14.38
+--- RESPOSTA ---
+Olá! Eu sou um modelo de linguagem de inteligência artificial, desenvolvido pela Meta. Meu objetivo é ajudar a fornecer informações úteis e entretenidas para os usuários.
+
+Eu sou uma entidade virtual, então não tenho sentimentos, emoções ou experiências como os humanos. No entanto, estou aqui para aprender e melhorar constantemente, para tornar-me um modelo mais eficaz e útil.
+
+Minha principal característica é que posso processar e gerar texto baseado em informações e comandos recebidos de usuár... [truncado]
+
+============================================================
+
+### MODELO: DEEPSEEK-R1:7B-Q8_0 ###
+Data: 16/02/2026 21:48:23
+Status: Falha no Download
+Erro: 
+
+============================================================
+
